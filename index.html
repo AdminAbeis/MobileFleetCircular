@@ -522,7 +522,7 @@
     position: fixed; bottom: 2rem; right: 2rem; z-index: 300;
     display: flex; flex-direction: column; align-items: flex-end; gap: 0.6rem;
   }
-  .pdf-btn, .docx-btn {
+  .pdf-btn, .docx-btn, .eco-btn {
     display: flex; align-items: center; gap: 0.6rem;
     padding: 0.75rem 1.4rem;
     background: var(--dark-3);
@@ -536,12 +536,20 @@
     box-shadow: 0 4px 24px rgba(0,0,0,0.5);
     transition: background 0.25s, border-color 0.25s, transform 0.2s;
   }
-  .pdf-btn:hover, .docx-btn:hover {
+  .pdf-btn:hover, .docx-btn:hover, .eco-btn:hover {
     background: var(--dark-4);
     border-color: var(--gold);
     transform: translateY(-2px);
   }
-  .pdf-btn svg, .docx-btn svg { flex-shrink: 0; }
+  .eco-btn {
+    border-color: rgba(100,180,100,0.5);
+    color: #7ecb7e;
+  }
+  .eco-btn:hover {
+    border-color: #7ecb7e;
+    color: #7ecb7e;
+  }
+  .pdf-btn svg, .docx-btn svg, .eco-btn svg { flex-shrink: 0; }
   @media print {
     .fab-group { display: none !important; }
   }
@@ -915,6 +923,13 @@
 
 <!-- BOTÕES FLUTUANTES -->
 <div class="fab-group">
+  <a class="eco-btn" href="https://drive.google.com/file/d/1FH1zMwAVOK1zQWzIkFo8MovIm4OMrULW/view?usp=drivesdk" target="_blank" rel="noopener" title="Material do Professor – Economia Circular">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
+      <path d="M3.51 9a9 9 0 0 1 14.36-3.36L23 10M1 14l5.13 4.36A9 9 0 0 0 20.49 15"/>
+    </svg>
+    Saiba + Economia Circular
+  </a>
   <a class="docx-btn" href="assets/docs/Relatorio_Mobile_Fleet.docx" download="Relatorio_Mobile_Fleet.docx" title="Download DOCX">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
